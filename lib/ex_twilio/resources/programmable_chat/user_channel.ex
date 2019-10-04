@@ -8,6 +8,7 @@ defmodule ExTwilio.ProgrammableChat.UserChannel do
   defstruct sid: nil,
             account_sid: nil,
             service_sid: nil,
+            channel_sid: nil,
             unread_messages_count: nil,
             last_consumed_message_index: nil,
             channel: nil,
@@ -20,6 +21,7 @@ defmodule ExTwilio.ProgrammableChat.UserChannel do
     ]
 
   def resource_name, do: "Channels"
+  def resource_collection_name, do: "channels"
 
   def parents,
     do: [
